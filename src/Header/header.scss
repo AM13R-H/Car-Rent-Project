@@ -1,0 +1,115 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "../component.scss";
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   width: 100vw;
+
+   .searchContainer {
+      display: flex;
+      align-items: center;
+      gap: .5em;
+      border: 1px solid rgba(195, 212, 233, 0.4);
+      border-radius: 70px;
+      padding: .3em 1em;
+      margin-left: 4em;
+      &:hover {
+         cursor: pointer;
+      }
+   
+      input {
+         border: none;
+         outline: none;
+         padding-left: .5em;
+         width: 20em;
+         font-size: 14px;
+         font-weight: 500;
+         color: $lightSecondry_color;
+         background: none;
+      }
+   
+      .icon {
+         cursor: pointer;
+      }
+   }
+
+   .navbar-nav {
+      display: flex;
+      gap: .8em;
+      li {
+         position: relative;
+         border: 1px solid rgba(195, 212, 233, 0.4);
+         width: 44px;
+         height: 44px;
+         border-radius: 50%;
+         color: $lightSecondry_color;
+         cursor: pointer;
+      }
+
+      li.notifIcon::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         background: rgba(255, 68, 35, 1);
+      }
+   }
+}
+
+//? responsive ?//
+
+@media screen and (max-width: 870px) {
+   .navbar-nav li.nav-link {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .navbar .searchContainer {
+      margin-left: 0;
+      border: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      gap: 1em;
+      padding: 0 1.5rem;
+
+      div.search {
+         width: 85%;
+         border: 1px solid rgba(195, 212, 233, 0.4);
+         border-radius: 10px;
+         padding: .5em;
+
+         input {
+            width: 16em;
+            font-size: 12px;
+         }
+      }
+
+      div.filterSearch {
+         display: flex;
+         justify-content: center;
+         width: 15%;
+         border: 1px solid rgba(195, 212, 233, 0.4);
+         border-radius: 10px;
+         padding: .5em;
+      }
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .navbar .searchContainer {
+      padding: 0 1rem;
+      .icon {
+         width: 18px;
+         height: 18px;
+      }
+   }
+}
+
+
