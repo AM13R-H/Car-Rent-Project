@@ -1,10 +1,13 @@
 import '../../css/app.css';
+import Footer from './Footer/Footer';
+import Header from './Header/Header';
 
 function App() {
 
   return (
     <>
-      <div>MORENT Project get started!</div>
+      <Header />
+      <Footer />
     </>
   )
 }
