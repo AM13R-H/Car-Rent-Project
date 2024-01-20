@@ -1,0 +1,99 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+.navbar .searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  border: 1px solid rgba(195, 212, 233, 0.4);
+  border-radius: 70px;
+  padding: 0.3em 1em;
+  margin-left: 4em;
+}
+.navbar .searchContainer:hover {
+  cursor: pointer;
+}
+.navbar .searchContainer input {
+  border: none;
+  outline: none;
+  padding-left: 0.5em;
+  width: 20em;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(144, 163, 191);
+  background: none;
+}
+.navbar .searchContainer .icon {
+  cursor: pointer;
+}
+.navbar .navbar-nav {
+  display: flex;
+  gap: 0.8em;
+}
+.navbar .navbar-nav li {
+  position: relative;
+  border: 1px solid rgba(195, 212, 233, 0.4);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: rgb(144, 163, 191);
+  cursor: pointer;
+}
+.navbar .navbar-nav li.notifIcon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(255, 68, 35);
+}
+
+@media screen and (max-width: 870px) {
+  .navbar-nav li.nav-link {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .navbar .searchContainer {
+    margin-left: 0;
+    border: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    gap: 1em;
+    padding: 0 1.5rem;
+  }
+  .navbar .searchContainer div.search {
+    width: 85%;
+    border: 1px solid rgba(195, 212, 233, 0.4);
+    border-radius: 10px;
+    padding: 0.5em;
+  }
+  .navbar .searchContainer div.search input {
+    width: 16em;
+    font-size: 12px;
+  }
+  .navbar .searchContainer div.filterSearch {
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    border: 1px solid rgba(195, 212, 233, 0.4);
+    border-radius: 10px;
+    padding: 0.5em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navbar .searchContainer {
+    padding: 0 1rem;
+  }
+  .navbar .searchContainer .icon {
+    width: 18px;
+    height: 18px;
+  }
+}/*# sourceMappingURL=header.css.map */

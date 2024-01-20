@@ -1,0 +1,141 @@
+@import "../component.scss";
+
+.footer {
+   position: absolute;
+   width: 100vw;
+   height: fit-content;
+   bottom: 0;
+}
+
+.logo p {
+   font-weight: 500;
+   line-height: 24px;
+   color: rgba(19, 19, 19, 0.6);
+}
+
+.logo .logoImg {
+   padding-bottom: 1em;
+}
+
+.footerContainer {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.about , .community , .socials {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-right: 3em;
+
+   h5 {
+      color: $secondry_color;
+      font-weight: 600;
+      padding-bottom: 1em;
+   }
+
+   ul {
+      display: flex;
+      flex-direction: column;
+      gap: .5em;
+      list-style: none;
+      padding: 0;
+      li a {
+         letter-spacing: -2%;
+         font-weight: 500;
+         color: rgba(19, 19, 19, 0.6);
+         &:hover {
+            cursor: pointer;
+            color: $primary_color;
+            text-decoration: none;
+         }
+      }
+   }
+}
+
+.privacy {
+   width: 100%;
+   border-top: 1px solid rgba(19, 19, 19, 0.16);
+   padding: 1.5em 0;
+
+   p {
+      color: $secondry_color;
+      font-weight: 600;
+   }
+
+   ul {
+      display: flex;
+      list-style: none;
+      li a {
+         color: $secondry_color;
+      }
+   }
+}
+
+//? responsive //
+@media screen and (max-width: 768px) {
+   .logo p {
+      font-size: 12px;
+   }
+
+   .logo .logoImg {
+      padding-bottom: .7em;
+   }
+
+   .about , .community , .socials {
+      margin-right: 1.5em;
+      // font-size: 12px;
+
+      h5 {
+         padding-bottom: .7em;
+      }
+
+      ul {
+         gap: .3em;
+      }
+   }
+
+   .privacy {
+      font-size: 12px;
+      letter-spacing: -2%;
+   }
+}
+
+
+@media screen and (max-width: 426px) {
+   footer {
+      background: transparent;
+   }
+
+   .footerContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+
+   .logo p , .about ul li a , .socials ul li a , .community ul li a {
+      color: $lightSecondry_color;
+   }
+
+   .about {
+      padding-bottom: .5em;
+   }
+
+   .privacy {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      
+      p {
+         width: 100%;
+         text-align: center;
+      }
+
+      ul {
+         padding-left: 0;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+      }
+   }
+}

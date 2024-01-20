@@ -1,0 +1,121 @@
+.footer {
+  position: absolute;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  bottom: 0;
+}
+
+.logo p {
+  font-weight: 500;
+  line-height: 24px;
+  color: rgba(19, 19, 19, 0.6);
+}
+
+.logo .logoImg {
+  padding-bottom: 1em;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about, .community, .socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 3em;
+}
+.about h5, .community h5, .socials h5 {
+  color: rgb(26, 32, 44);
+  font-weight: 600;
+  padding-bottom: 1em;
+}
+.about ul, .community ul, .socials ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  list-style: none;
+  padding: 0;
+}
+.about ul li a, .community ul li a, .socials ul li a {
+  letter-spacing: -2%;
+  font-weight: 500;
+  color: rgba(19, 19, 19, 0.6);
+}
+.about ul li a:hover, .community ul li a:hover, .socials ul li a:hover {
+  cursor: pointer;
+  color: rgb(53, 99, 233);
+  text-decoration: none;
+}
+
+.privacy {
+  width: 100%;
+  border-top: 1px solid rgba(19, 19, 19, 0.16);
+  padding: 1.5em 0;
+}
+.privacy p {
+  color: rgb(26, 32, 44);
+  font-weight: 600;
+}
+.privacy ul {
+  display: flex;
+  list-style: none;
+}
+.privacy ul li a {
+  color: rgb(26, 32, 44);
+}
+
+@media screen and (max-width: 768px) {
+  .logo p {
+    font-size: 12px;
+  }
+  .logo .logoImg {
+    padding-bottom: 0.7em;
+  }
+  .about, .community, .socials {
+    margin-right: 1.5em;
+  }
+  .about h5, .community h5, .socials h5 {
+    padding-bottom: 0.7em;
+  }
+  .about ul, .community ul, .socials ul {
+    gap: 0.3em;
+  }
+  .privacy {
+    font-size: 12px;
+    letter-spacing: -2%;
+  }
+}
+@media screen and (max-width: 426px) {
+  footer {
+    background: transparent;
+  }
+  .footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .logo p, .about ul li a, .socials ul li a, .community ul li a {
+    color: rgb(144, 163, 191);
+  }
+  .about {
+    padding-bottom: 0.5em;
+  }
+  .privacy {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .privacy p {
+    width: 100%;
+    text-align: center;
+  }
+  .privacy ul {
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=footer.css.map */
